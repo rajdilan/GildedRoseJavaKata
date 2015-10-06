@@ -18,7 +18,7 @@ public class ConjuredKind extends Item implements IConjuredKind{
         }
         if(getQuality()<=0){
             //setQuality(getQuality()-getQuality());
-            setQuality(1000);
+            setQuality(0);
         }
     }
 }
