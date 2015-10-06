@@ -9,6 +9,16 @@ public class AgedBrieKind extends Item implements IAgedBrieKind {
     }
 
     public void updateQuality(){
+        if(getQuality()<50) {
+            setQuality(getQuality() + 1);
+        }
 
+        setSellIn(getSellIn() - 1);
+
+        if (getSellIn() < 0) {
+            if (getQuality() < 50) {
+                setQuality(getQuality() + 1);
+            }
+        }
     }
 }

@@ -7,4 +7,8 @@ public class SulfurateKind extends Item implements ISulfurateKind{
     public SulfurateKind(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
+
+    public void updateQuality(){
+        setQuality(getQuality());
+    }
 }
