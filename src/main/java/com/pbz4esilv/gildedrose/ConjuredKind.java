@@ -11,13 +11,11 @@ public class ConjuredKind extends Item implements IConjuredKind {
 
     @Override
     public void updateQuality() {
-        if(getSellIn()>=0){
+        setQuality(getQuality() - 2);
+        setSellIn(getSellIn() - 1);
+        if(getSellIn()<0) {
             setQuality(getQuality() - 2);
         }
-        else{
-            setQuality(getQuality() - 4);
-        }
-        setSellIn(getSellIn() - 1);
         if(getQuality()<=0) {
             setQuality(getQuality() - getQuality());
         }
