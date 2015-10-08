@@ -12,7 +12,7 @@ public class SulfurateKindTest {
     @Test
     public void testUpdateQuality() throws Exception {
         SulfurateKind s = new SulfurateKind("nnnn",2,95);
-        s.updateQuality();
+        s.updateQuality(); //here the quality will never change
         assertEquals(95,s.getQuality());
 
     }

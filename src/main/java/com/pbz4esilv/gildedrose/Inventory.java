@@ -5,7 +5,7 @@ public class Inventory {
     private Item[] items;
 
     public Item[] GetItems(){
-        return items;
+        return items;   //It is needed for the InventoryTest Class
     }
 
     public Inventory(Item[] items) {
@@ -15,6 +15,7 @@ public class Inventory {
 
     public Inventory() {
         super();
+        //We have replaced the correct constructor for each Item
         items = new Item[]{
                 new NormalKind("+5 Dexterity Vest", 10, 20),
                 new AgedBrieKind("Aged Brie", 2, 0),
@@ -25,6 +26,10 @@ public class Inventory {
         };
 
     }
+
+    /*  each item in the array items[] will be checked for which class they are instance of and it will apply
+        the specific updateQuality() method
+    */
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {

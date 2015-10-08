@@ -11,13 +11,13 @@ public class ConjuredKindTest {
 
     @Test
     public void testUpdateQuality() throws Exception {
-        ConjuredKind ck = new ConjuredKind("nn", 1 , 3);
-        ck.updateQuality();
-        assertEquals(1,ck.getQuality());
-        assertEquals(0,ck.getSellIn());
-        ck.updateQuality();
+        ConjuredKind ck = new ConjuredKind("nn", 1 , 7);
+        ck.updateQuality(); //here the quality will decrease by 2
+        assertEquals(5,ck.getQuality());
+        ck.updateQuality(); //here the quality will decrease by 4 because the sellIn < 0
+        assertEquals(1, ck.getQuality());
+        ck.updateQuality(); //here the quality will be 0
         assertEquals(0,ck.getQuality());
-        assertEquals(-1,ck.getSellIn());
 
     }
 }
